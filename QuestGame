@@ -13,7 +13,7 @@ int main()
 	string input; //given string because this is what works. if you have another way be sure to show!
 	bool flag = false;
 	
-	cout<<"                                                                               "<<endl;
+    cout<<"                                                                               "<<endl;
     cout<<" ##############################################################################"<<endl;
     cout<<" #                                                       ver. 0.0.0 Alpha(C++)#"<<endl;
     cout<<" #                             Welcome To Quest!                              #"<<endl;
@@ -32,7 +32,7 @@ int main()
     cout<<" #                                      |                                     #"<<endl;
     cout<<" #                                      |                                     #"<<endl;
     cout<<" #                                      |                                     #"<<endl;
-	cout<<" #                                      |                                     #"<<endl;
+    cout<<" #                                      |                                     #"<<endl;
     cout<<" #                                      |                                     #"<<endl;
     cout<<" #                                      |                                     #"<<endl;
     cout<<" ##############################################################################"<<endl;
@@ -43,7 +43,7 @@ int main()
     
     //puts this in a loop incase invalid input was given, could be made into a function surely. 
 	do{
-    cout<<"\n1. Left\n";
+    cout<<"\n1. Left\n"; //we want more than just left and right surely, so this should be different
     cout<<"\n2. Right\n";
     
 	cin>>input;
