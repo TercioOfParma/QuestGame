@@ -1,6 +1,6 @@
 #ifndef INCLUDE_LOCK // this means when we graduate to more files it should mean there wont be issues with including
+#define INCLUDE_LOCK //fixed include lock
 #include "basic.h"
-#define INCLUDE_LOCK
 #endif
 
 using namespace std; //using it cuz look at all those damn cout statements. this is just for now, we can fix it later. 

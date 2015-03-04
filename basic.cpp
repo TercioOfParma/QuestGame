@@ -1,6 +1,7 @@
 #ifndef INCLUDE_LOCK // this means when we graduate to more files it should mean there wont be issues with including
+#define INCLUDE_LOCK//fixed include lock
 #include "basic.h"
-#define INCLUDE_LOCK
+
 #endif
 
 #define BANNER_SIZE_COLUMNS 80
@@ -14,6 +15,9 @@ int init(char **args)
 	char *bannerstr = (char *)malloc(sizeof(char) * (BANNER_SIZE_COLUMNS * BANNER_SIZE_ROWS));
 	char *bannerstrbegin = bannerstr; //holds the beginning address of banner string
 	FILE *banner = fopen("banner.txt", "r");
+	time_t start, end, diff;
+	time(&start);
+	int msec;
 	chdir("...");
 	if(!banner)
 	{
@@ -24,6 +28,12 @@ int init(char **args)
 	
 
 	fread(bannerstr, sizeof(char), BANNER_SIZE_COLUMNS * BANNER_SIZE_ROWS, banner); //should read the entire file until EOF in the case of ours
+	
+	time(&end);
+	diff = end - start;
+	
+	std::cout << "Time taken " << diff << " Clock ticks" << std::endl;
+	std::cin.get();
 	/*
 	
 	If you make the file 2 bytes bigger or 1 byte smaller than it actually is crazy stuff happens:
