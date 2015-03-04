@@ -11,7 +11,7 @@ int init(char **args)
 {
 	SetConsoleTitle("The Quest");
 	chdir("data");//thank god for unistd
-	char *bannerstr = (char *)malloc(sizeof(char) * (BANNER_SIZE_COLUMNS * BANNER_SIZE_ROWS))
+	char *bannerstr = (char *)malloc(sizeof(char) * (BANNER_SIZE_COLUMNS * BANNER_SIZE_ROWS));
 	char *bannerstrbegin = bannerstr; //holds the beginning address of banner string
 	FILE *banner = fopen("banner.txt", "r");
 	chdir("...");
@@ -35,7 +35,8 @@ int init(char **args)
 	std::cout << bannerstr << std::endl;
 	std::cin.get();
 	clear(BANNER_SIZE_ROWS);
-
+	fclose(banner);
+	free(bannerstr);
 
 }
 void clear(int rows)
@@ -48,6 +49,4 @@ void clear(int rows)
 	
 	}
 
-
 }
-
